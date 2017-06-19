@@ -29,17 +29,17 @@ In the table below, we keep track of the streams that we have logged with corres
 |17/6|14:00-15:00|1hr|thijshs |TBD|Educational (Game)|Might have stopped earlier due to machine falling asleep||
 ||||lck1|TBD|Competitive|''||
 ||||garenatw |TBD|Competitive|''||
-||||jonsandman |TBD|Variety?|''||
+||||jonsandman |TBD|Variety|''||
 ||||iwilldominate |TBD|Variety?|''||
-||||colalin |TBD|Variety|''||
+||||colalin |TBD|Real Talk|''||
 ||||redbull |TBD|Music|''||
 ||||dreamhackhs |TBD|Competitive|''||
 ||||imaqtpie|TBD|Variety?|''||
 |17/6|11:00-12:00|1hr|thijshs|TBD|Educational (Game)|Might have stopped earlier due to machine falling asleep||
 ||||lck1|TBD|Competitive|''||
 ||||garenatw|TBD|Competitive|''||
-||||jonsandman|TBD|Variety?|''||
+||||jonsandman|TBD|Variety|''||
 ||||iwilldominate|TBD|Variety?|''||
-||||colalin|TBD|Variety|''||
+||||colalin|TBD|Real Talk|''||
 ||||redbull|TBD|Music|''||
 ||||dreamhackhs|TBD|Competitive|''||
