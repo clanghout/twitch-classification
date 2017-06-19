@@ -18,28 +18,28 @@ To be able to gather all the chat logs of different live streams, we used an exi
 We have tried to diversify the genres of streams that we log as much as possible, but for some genres the presence of streams was scarse.
 In the table below, we keep track of the streams that we have logged with corresponding information.
 
-| Date | Time | Duration | Channel | #Messages | Genre | Comments | ... |
-|------|------|----------|---------|-----------|-------|----------|-----|
-|17/6|21:45-2:00|4.5hr|nalcs1|TBD|Competitive||| 
-||||nalcs2|TBD|Competitive||| 
-||||kolento|TBD|Educational (Game)||| 
-||||kev1ntv|TBD|Educational (Game)||| 
-||||disguisedtoasths|TBD|Variety|||
-|17/6|21:45-22:45|1hr|lifecoach1981|TBD|Educational||| 
-|17/6|14:00-15:00|1hr|thijshs |TBD|Educational (Game)|Might have stopped earlier due to machine falling asleep||
-||||lck1|TBD|Competitive|''||
-||||garenatw |TBD|Competitive|''||
-||||jonsandman |TBD|Variety|''||
-||||iwilldominate |TBD|Variety?|''||
-||||colalin |TBD|Real Talk|''||
-||||redbull |TBD|Music|''||
-||||dreamhackhs |TBD|Competitive|''||
-||||imaqtpie|TBD|Variety?|''||
-|17/6|11:00-12:00|1hr|thijshs|TBD|Educational (Game)|Might have stopped earlier due to machine falling asleep||
-||||lck1|TBD|Competitive|''||
-||||garenatw|TBD|Competitive|''||
-||||jonsandman|TBD|Variety|''||
-||||iwilldominate|TBD|Variety?|''||
-||||colalin|TBD|Real Talk|''||
-||||redbull|TBD|Music|''||
-||||dreamhackhs|TBD|Competitive|''||
+| Date | Time | Duration | Channel | #Messages | Genre | Comments | #Viewers | ... |
+|------|------|----------|---------|-----------|-------|----------|----------|-----|
+|17/6|21:45-2:00|4.5hr|nalcs1|51892|Competitive||||
+||||nalcs2|22077|Competitive||| |
+||||kolento|7245|Educational (Game)||| |
+||||kev1ntv|1264|Educational (Game)||| |
+||||disguisedtoasths|20389|Variety||||
+|17/6|21:45-22:45|1hr|lifecoach1981|223|Educational||| |
+|17/6|14:00-15:00|1hr|thijshs |TBD|Educational (Game)|Might have stopped earlier due to machine falling asleep|||
+||||lck1|TBD|Competitive|''|||
+||||garenatw |TBD|Competitive|''|||
+||||jonsandman |TBD|Variety|''|||
+||||iwilldominate |TBD|Variety?|''|||
+||||colalin |TBD|Real Talk|''|||
+||||redbull |TBD|Music|''|||
+||||dreamhackhs |TBD|Competitive|''|||
+||||imaqtpie|2143|Variety?|''|||
+|17/6|11:00-12:00|1hr|thijshs|TBD|Educational (Game)|Might have stopped earlier due to machine falling asleep|||
+||||lck1|TBD|Competitive|''|||
+||||garenatw|TBD|Competitive|''|||
+||||jonsandman|TBD|Variety|''|||
+||||iwilldominate|TBD|Variety?|''|||
+||||colalin|TBD|Real Talk|''|||
+||||redbull|TBD|Music|''|||
+||||dreamhackhs|TBD|Competitive|''|||
