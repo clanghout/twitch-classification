@@ -1,6 +1,6 @@
 # Twitch Classification
-In this project, we attempt to create a classifier for multimedia streams on the live video streaming platform [Twitch](https://www.twitch.tv/). 
-To do so, the classifier is based on the Twitch Chat, the chat lobby accompanying each live stream. 
+In this project, we attempt to create a classifier to categorize multimedia streams on the live video streaming platform [Twitch](https://www.twitch.tv/) into multiple genres (variety, competitive, chill...)
+To do so, we extract the messages from Twitch chat (the chat lobby of Twitch)and classify to which kind of stream these messages are most likely 
 The genres of streams that we classify into, are based on our own categorisation and [Twitch Communities](https://www.twitch.tv/directory/communities):
 - Competitive/eSports
 - Variety
