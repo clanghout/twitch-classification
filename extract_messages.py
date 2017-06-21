@@ -15,19 +15,33 @@ filename = 'data/data.csv'
 # The query for the database
 query = "SELECT channel, sender, date, message FROM chat_log"
 
-msg_per_minute_per_channel_query = "
+msg_per_minute_per_channel_query = """
 SELECT rchannel, AVG(a.rcount) 
 FROM 
-  (SELECT channel as rchannel, COUNT(*) as rcount
+  	(SELECT channel as rchannel, COUNT(*) as rcount
     FROM chat_log
     GROUP BY date_trunc('minute', to_timestamp(date/1000)), channel) a
 GROUP BY a.rchannel
-"
+"""
 
 average_length_msg_per_channel_query = """
 SELECT channel, AVG(char_length(message))
 FROM chat_log
 GROUP BY channel
+"""
+
+amount_distinct_chatters_query = """
+SELECT channel, COUNT(DISTINCT sender)
+FROM chat_log
+GROUP BY channel
+"""
+distinct_chatters_per_minute_query = """
+SELECT viewers.rchannel, AVG(viewers.distinctsenders)
+FROM 
+	(SELECT channel as rchannel, COUNT(DISTINCT sender) as distinctsenders
+	FROM chat_log
+	GROUP BY date_trunc('minute', to_timestamp(date/1000)), channel) viewers
+GROUP BY viewers.rchannel
 """
 
 # Get the label dictionary
