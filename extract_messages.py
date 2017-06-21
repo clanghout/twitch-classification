@@ -15,7 +15,7 @@ filename = 'data/data.csv'
 # The query for the database
 query = "SELECT channel, sender, date, message FROM chat_log"
 
-msg_per_minute_perchannel_query = "
+msg_per_minute_per_channel_query = "
 SELECT rchannel, AVG(a.rcount) 
 FROM 
   (SELECT channel as rchannel, COUNT(*) as rcount
@@ -23,6 +23,12 @@ FROM
     GROUP BY date_trunc('minute', to_timestamp(date/1000)), channel) a
 GROUP BY a.rchannel
 "
+
+average_length_msg_per_channel_query = """
+SELECT channel, AVG(char_length(message))
+FROM chat_log
+GROUP BY channel
+"""
 
 # Get the label dictionary
 label_dict = {}
