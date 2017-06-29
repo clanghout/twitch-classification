@@ -1,3 +1,4 @@
+#arcsecond educational (game)
 #blizzheroes competitive
 #bobross creative
 #colalin real talk
@@ -14,6 +15,7 @@
 #kolento educational (game)
 #lck1 competitive
 #lifecoach1981 educational
+#midbeastlol educational (game)
 #monstercat music
 #nalcs1 competitive
 #nalcs2 competitive
@@ -24,3 +26,9 @@
 #thijshs educational (game)
 #totalbiscuit variety
 #wickd educational (game)
+#voyboy educational (game)
+#sjow variety
+#jeeltv talkshow
+#itshafu variety 
+#livesessionsgc music 
+#cordellium speedrunning
