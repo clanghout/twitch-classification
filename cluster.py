@@ -146,4 +146,27 @@ X = np.array(list(results_dict.itervalues()))
 
 clf = svm.SVC(kernel='linear', C = 1.0)
 clf.fit(X,labels)
+
+def findCategory(index):
+	for key, values in cates.iteritems():
+		if values['index'] == index:
+			return key
+
+def getCategoryIndex(category):
+	return cates[category]['index']
+
+print list(cates.iterkeys())
+
+educational_index = getCategoryIndex('educational (game)')
+speedrunning_index = getCategoryIndex('speedrunning')
+music_index = getCategoryIndex('music')
+competitive_index = getCategoryIndex('competitive')
+variety_index = getCategoryIndex('variety')
+with open('data/testfeatures.csv') as csvfile:
+	reader = csv.DictReader(csvfile)
+	for row in reader:
+		print row['channel']
+		prediction = clf.predict(np.array([row['distinct_chatters/min'], row['emote/min'], row['msg/min'], row['average_length_msg']]).reshape(1, -1))
+		print "{} {}".format(prediction, findCategory(prediction[0]))
+	
 f.close()
