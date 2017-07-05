@@ -48,9 +48,9 @@ def readFeatures() :
             X.append([distinct_chatters_min,emote_min,msg_min,average_length_msg])
         return np.array(X), np.array(channels)
 
-def findChannel() :
+def findChannel(cz) :
     features, channels = readFeatures()
-    categories = cluster(features,10)
+    categories = cluster(features,cz)
     streams_dict = {}
     for i in range(len(channels)):
         channel = channels[i]
@@ -60,7 +60,7 @@ def findChannel() :
         streams_dict[category].append(channel)
         # print(category)
         # print(channel)
-    print streams_dict
+    return streams_dict
 
 def cluster(features, clustersize) :
     kmeans = KMeans(n_clusters=clustersize)
@@ -72,12 +72,38 @@ def cluster(features, clustersize) :
     # print(centroids)
     return labels
 
-def clusters():
-    clusters8 = json.load(open('data/unsupervised_8_groups.json'))
-    clusters9 = json.load(open('data/unsupervised_9_groups.json'))
-    clusters10 = json.load(open('data/unsupervised_10_groups.json'))
-    
-
+def combineClusters():
+    counter = 0
+    features, channels = readFeatures()
+    print("number of channels: {}".format(len(channels)))
+    clusters8 = findChannel(8)
+    clusters9 = findChannel(9)
+    clusters10 = findChannel(10)
+    for cluster8 in clusters8.itervalues() :
+        # print cluster8
+        cluster8s = set(cluster8)
+        for cluster9 in clusters9.itervalues() :
+            cluster9s = set(cluster9)
+            for cluster10 in clusters10.itervalues() :
+                cluster10s = set(cluster10)
+                intersect = cluster8s.intersection(cluster9s).intersection(cluster10s)
+                if len(intersect) > 1:
+                    print ("Intersection {}".format([item.encode("utf-8") for item in list(intersect)]))
+    # for i in range(len(channels)):
+    #     cnm = channels[i]
+    #     c8m = clusters8[i]
+    #     c9m = clusters9[i]
+    #     c10m = clusters10[i]
+    #     for j in range(len(channels)):
+    #         cn = channels[j]
+    #         c8 = clusters8[j]
+    #         c9 = clusters9[j]
+    #         c10 = clusters10[j]
+    #         if cn != cnm and c8m == c8 and c9m == c9 and c10m == c10 :
+    #             counter+=1
+    #             print ("{} - {}").format(cn,cnm)
+    # print (counter)
 
 # findChannel()
+
 combineClusters()

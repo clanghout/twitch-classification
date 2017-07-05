@@ -109,6 +109,7 @@ writer.writeheader()
 
 cur = conn.cursor()
 
+
 # ---- 
 features = [
 	'distinct_chatters/min',
