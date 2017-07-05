@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import KFold
 from tfidf_documents import tf_idf_predict
+from jaccard_similarity import jaccard_predict
 
 # Load channel dictionary
 label_dict = {}
@@ -39,10 +40,13 @@ results = []
 for train, test in kf.split(channels):
 	predicted = tf_idf_predict(data[data['channel'].isin(channels[train])],
 							   data[data['channel'].isin(channels[test])])
+	#predicted = jaccard_predict(data[data['channel'].isin(channels[train])], 
+	#				data[data['channel'].isin(channels[test])])
 	labels = data[data['channel'].isin(channels[test])]['label']
 	
 	results.extend(zip(labels, predicted))
-
+	
+					
 res = pd.DataFrame(results, columns=['label', 'prediction'])
 counts = res.groupby(['label', 'prediction']).size()
 print(counts)
