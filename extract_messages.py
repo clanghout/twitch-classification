@@ -110,4 +110,5 @@ def writeToCsv (queryResult) :
     		})
 
 writeToCsv(cur)
+
 f.close()
