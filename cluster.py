@@ -102,13 +102,13 @@ def executeQuery(query, entries, features):
 filename = 'data/features.csv'
 
 # Check if the csv file exists and creates it when it does not
-
-# exists = os.path.exists(filename)
-# f = open(filename, 'w')
-# writer = csv.DictWriter(f, fieldnames=['channel', 'distinct_chatters/min', 'emote/min', 'msg/min', 'average_length_msg'])
-# writer.writeheader()
+exists = os.path.exists(filename)
+f = open(filename, 'w')
+writer = csv.DictWriter(f, fieldnames=['channel', 'distinct_chatters/min', 'emote/min', 'msg/min', 'average_length_msg'])
+writer.writeheader()
 
 cur = conn.cursor()
+
 # ---- 
 features = [
 	'distinct_chatters/min',
@@ -123,22 +123,20 @@ counter = executeQuery(emote_per_minute_perchannel_query, results_dict, counter)
 counter = executeQuery(msg_per_minute_per_channel_query, results_dict, counter)
 counter = executeQuery(average_length_msg_per_channel_query, results_dict, counter)
 
-
-# for channel, features_results in results_dict.iteritems():
-# 	writer.writerow({
-# 		'channel': channel,
-# 		'distinct_chatters/min': features_results[0],
-# 		'emote/min': features_results[1], 
-# 		'msg/min': features_results[2], 
-# 		'average_length_msg': features_results[3]
-# 	})
+for channel, features_results in results_dict.iteritems():
+    writer.writerow({
+        'channel': channel,
+        'distinct_chatters/min': features_results[0],
+        'emote/min': features_results[1], 
+        'msg/min': features_results[2], 
+        'average_length_msg': features_results[3]
+    })
 
 categories = set([])
 cates = {}
 count = 0
 labels = []
 for channel in results_dict.iterkeys():
-
 	if label_dict[channel] not in cates:
 		cates[label_dict[channel]] = { 
 			'channels': [channel], 

@@ -89,7 +89,8 @@ if not exists:
 	writer.writeheader()
 
 cur = conn.cursor()
-cur.execute(query)
+cur.execute(emote_per_minute_perchannel_query)
+print cur.fetchall()
 
 def writeToCsv (queryResult) :
     count = 0
@@ -106,7 +107,4 @@ def writeToCsv (queryResult) :
     			'date' : row[2],
     			'message' : row[3]
     		})
-
-writeToCsv(cur)
-
 f.close()
