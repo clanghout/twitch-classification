@@ -75,6 +75,7 @@ with open('label_dictionary.txt') as f:
 # Get the database connection
 try:
 	conn = psycopg2.connect("""dbname='twitch'
+
 	                           user='%s'
 	                           host='localhost'
 	                           password='%s'""" % (args.user, args.password))
@@ -89,9 +90,6 @@ if not exists:
 	writer.writeheader()
 
 cur = conn.cursor()
-cur.execute(emote_per_minute_perchannel_query)
-
-print cur.fetchall()
 
 def writeToCsv (queryResult) :
     count = 0

@@ -3,6 +3,7 @@
 #bobross creative
 #colalin real talk
 #disguisedtoasths variety
+#dreamhacks competitive
 #dreamhackhs competitive
 #enviosity chill
 #gamej06 speedrunning
@@ -14,11 +15,12 @@
 #kindafunnygames talkshow
 #kolento educational (game)
 #lck1 competitive
-#lifecoach1981 educational (game)
-#midbeastlol educational (game)
+#lifecoach educational
 #monstercat music
 #nalcs1 competitive
 #nalcs2 competitive
+#lifecoach1981 educational (game)
+#midbeastlol educational (game)
 #ognglobal competitive
 #redbull music
 #shenryyr chill
