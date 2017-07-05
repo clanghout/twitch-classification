@@ -75,7 +75,6 @@ with open('label_dictionary.txt') as f:
 # Get the database connection
 try:
 	conn = psycopg2.connect("""dbname='twitch'
-
 	                           user='%s'
 	                           host='localhost'
 	                           password='%s'""" % (args.user, args.password))
@@ -85,11 +84,12 @@ except:
 # Check if the csv file exists and creates it when it does not
 exists = os.path.exists(filename)
 f = open(filename, 'a')
-writer = csv.DictWriter(f, fieldnames=['genre', 'channel', 'sender', 'date', 'message'])
+writer = csv.DictWriter(f, fieldnames=['channel', 'sender', 'date', 'message'])
 if not exists:
 	writer.writeheader()
 
 cur = conn.cursor()
+cur.execute(query)
 
 def writeToCsv (queryResult) :
     count = 0
@@ -100,13 +100,13 @@ def writeToCsv (queryResult) :
     	if not rows:
     		break
     	for row in rows:
-    		genre = label_dict[row[0]]
     		writer.writerow({
-    			'genre' : genre,
     			'channel' : row[0],
     			'sender' : row[1],
     			'date' : row[2],
     			'message' : row[3]
     		})
+
+writeToCsv(cur)
 
 f.close()
