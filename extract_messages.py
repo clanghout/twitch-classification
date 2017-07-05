@@ -91,8 +91,6 @@ if not exists:
 cur = conn.cursor()
 cur.execute(query)
 
-# print cur.fetchall()
-
 def writeToCsv (queryResult) :
     count = 0
     while True:
